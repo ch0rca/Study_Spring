@@ -1,0 +1,12 @@
+package com.mycom.myapp.reflection;
+
+public class Test {
+
+	public static void main(String[] args) throws Exception {
+		// TODO Auto-generated method stub
+		Class<?> userClass = Class.forName("com.mycom.myapp.reflection.User");
+		
+		System.out.println(userClass.getName());
+	}
+
+}

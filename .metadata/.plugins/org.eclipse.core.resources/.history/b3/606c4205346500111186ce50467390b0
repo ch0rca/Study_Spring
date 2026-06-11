@@ -1,0 +1,36 @@
+package com.mycom.myapp.reflection;
+
+import java.lang.reflect.Constructor;
+import java.lang.reflect.Method;
+
+public class Test {
+
+	public static void main(String[] args) throws Exception {
+		// TODO Auto-generated method stub
+		Class<?> userClass = Class.forName("com.mycom.myapp.reflection.User");
+		
+//		System.out.println(userClass.getName());
+		
+//		Field[] fields = userClass.getDeclaredFields();
+//		for(Field field : fields) {
+//			System.out.println(userClass.getName());
+//			System.out.println(userClass.getType());
+//		}
+		
+		Method[] methods = userClass.getDeclaredMethods();
+		for(Method method : methods) {
+			System.out.println(
+					method.getName() + ", " + method.getParameterCount() + ", " + method.getReturnType());
+
+		}
+		
+		Constructor<?>[] constructors = userClass.getDeclaredConstructors();
+		for(Constructor<?> constructor : constructors) {
+			System.out.println(
+					constructor.getName() + ", " + constructor.getParameterCount());
+
+		}
+
+		}
+
+}

@@ -1,0 +1,17 @@
+package com.mycom.myapp.proxy;
+
+public class MyIFImpl implements MyIF {
+	
+	@Override
+	@CheckNotNull(parameterNames= {"param1","param2"})
+	public void m(String param1, String param2) {
+		System.out.println("m()");
+		System.out.println(param1 + ", " + param2);
+	}
+	
+	@Override
+	public void m2(String param1, String param2) {
+		System.out.println("m2()");
+		System.out.println(param1 + ", " + param2);
+	}
+}
