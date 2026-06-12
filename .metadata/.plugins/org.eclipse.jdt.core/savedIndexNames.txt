@@ -1,8 +1,0 @@
-INDEX VERSION 1.134+C:\Users\ASUS\Desktop\ureca_spring\.metadata\.plugins\org.eclipse.jdt.core
-654521539.index
-1865797976.index
-3682174810.index
-130594068.index
-2493853504.index
-503357020.index
-2584876436.index
