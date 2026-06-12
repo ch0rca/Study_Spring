@@ -70,7 +70,6 @@ public class ParamController {
 		System.out.println(accept);
 		System.out.println(apiKey);
 	}
-	//TETST
 }
 
 
