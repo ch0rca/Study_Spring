@@ -6,3 +6,5 @@
 
 bin/
 target/
+
+src/main/resources/*.properties
