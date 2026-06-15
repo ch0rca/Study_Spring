@@ -15,10 +15,10 @@ public class CarDto {
 		this.owner = owner;
 	}
 	// ~Name -> ~Name2
-	public String getName2() {
+	public String getName() {
 		return name;
 	}
-	public void setName2(String name) {
+	public void setName(String name) {
 		this.name = name;
 	}
 	public int getPrice() {
