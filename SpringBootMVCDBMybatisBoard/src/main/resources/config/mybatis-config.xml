@@ -10,6 +10,8 @@
     
     <mappers>
         <mapper resource="mapper/user-mapper.xml"/>
+        <mapper resource="mapper/login-mapper.xml"/>
+        <mapper resource="mapper/board-mapper.xml"/>
     </mappers>
     
 </configuration>

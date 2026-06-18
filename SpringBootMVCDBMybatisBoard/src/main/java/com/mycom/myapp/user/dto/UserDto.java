@@ -59,9 +59,13 @@ public class UserDto {
 		this.userRegisterDate = userRegisterDate;
 	}
 	
+	// toString() 민감한 데이터 출력 X
 	@Override
+//	public String toString() {
+//		return "UserDto [userSeq=" + userSeq + ", userName=" + userName + ", userPassword=" + userPassword
+//				+ ", userProfileImage=" + userProfileImage + ", userRegisterDate=" + userRegisterDate + "]";
+//	}
 	public String toString() {
-		return "UserDto [userSeq=" + userSeq + ", userName=" + userName + ", userPassword=" + userPassword
-				+ ", userProfileImage=" + userProfileImage + ", userRegisterDate=" + userRegisterDate + "]";
+		return "UserDto [userSeq=" + userSeq + ", userName=" + userName + ", userProfileImage=" + userProfileImage + ", userRegisterDate=" + userRegisterDate + "]";
 	}
 }
