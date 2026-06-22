@@ -11,6 +11,10 @@ import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import jakarta.servlet.http.HttpSession;
 
+// page 요청 <= 데이터 응답 ( 브라우저가 알아서 데이터를 최대한 화면에 보여준다. - html 태그가 없어도.... )
+// 데이터 요청 <= 페이지 응답 ( 자바스크립트가 json 화 시도 실패 - 자바스크립트 오류 발생.)
+// Spring MVC + JSP + AJAX
+// 현재 LoginInterceptor 는 데이터 요청 시 로그인 유도 실패.
 @Component
 public class LoginInterceptor implements HandlerInterceptor{
 	// 통과 여부를 true, false 로 리턴
