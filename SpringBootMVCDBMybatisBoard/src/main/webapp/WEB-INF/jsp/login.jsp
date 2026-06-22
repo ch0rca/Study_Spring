@@ -22,11 +22,11 @@
 		<form novalidate><!-- 브라우저의 기본 유효성 검사 제외 -->
 			<div class="mb-3">
 			  <label for="userEmail" class="form-label">User Email</label>
-			  <input type="email" class="form-control" id="userEmail" placeholder="이메일을 입력하세요.">	  
+			  <input type="email" class="form-control" id="userEmail" placeholder="이메일을 입력하세요." value="dskim@dskim.com">	  
 			</div>
 			<div class="mb-3">
 			  <label for="userPassword" class="form-label">User Password</label>
-			  <input type="password" class="form-control" id="userPassword" placeholder="비밀번호를 입력하세요.">		  
+			  <input type="password" class="form-control" id="userPassword" placeholder="비밀번호를 입력하세요." value="1234">		  
 			</div>
 		</form>
 		<button id="btnLogin" class="btn btn-primary">로그인</button>

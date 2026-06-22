@@ -13,4 +13,8 @@ public interface BoardDao {
 	// 목록, 목록별 전체 건수
 	List<BoardDto> listBoard(BoardParamDto boardParamDto);
 	int listBoardTotalCount();
+	
+	// 검색어 목록, 검색어 목록별 전체 건수
+	List<BoardDto> listBoardSearchWord(BoardParamDto boardParamDto);
+	int listBoardSearchWordTotalCount(BoardParamDto boardParamDto);
 }

@@ -18,4 +18,19 @@
 	<select id="listBoardTotalCount">
 		select count(*) from board;
 	</select>
+	
+	<!-- 검색어 -->
+	<select id="listBoardSearchWord" resultType="com.mycom.myapp.board.dto.BoardDto">
+		select b.board_id, u.user_seq, u.user_name, u.user_profile_image, b.title, b.reg_dt, b.read_count
+		  from board b, users u
+		 where b.user_seq = u.user_seq
+		   and b.title like concat('%', #{searchWord}, '%')
+		 order by b.board_id desc
+		 limit #{limit} offset #{offset};
+	</select>
+
+	<select id="listBoardSearchWordTotalCount">
+		select count(*) from board
+		 where title like concat('%', #{searchWord}, '%');
+	</select>	
 </mapper>  

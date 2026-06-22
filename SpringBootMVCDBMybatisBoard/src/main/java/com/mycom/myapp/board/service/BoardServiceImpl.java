@@ -33,4 +33,18 @@ public class BoardServiceImpl implements BoardService{
 		return boardResultDto;
 	}
 
+	// 검색어가 있는 경우
+	@Override
+	public BoardResultDto listBoardSearchWord(BoardParamDto boardParamDto) {
+		BoardResultDto boardResultDto = new BoardResultDto();
+		
+		List<BoardDto> list = boardDao.listBoardSearchWord(boardParamDto); // 목록
+		int count = boardDao.listBoardSearchWordTotalCount(boardParamDto); // 전체 건수
+		boardResultDto.setList(list);
+		boardResultDto.setCount(count);
+		boardResultDto.setResult("success");
+		
+		return boardResultDto;
+	}
+
 }
