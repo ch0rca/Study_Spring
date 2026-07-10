@@ -5,12 +5,30 @@
 <title>Insert title here</title>
 </head>
 <body>
+	<!-- 우리의 login.html 을 사용하고, 백엔드에서 csrf 적용할 겨우, 프론트의 login.html 도 대응 코드를 작성해야 한다. -->
 	<h1>login.html 입니다.</h1>	
 	<hr>
 	<form action="/login" method="post">
 		<input type="text" id="username" name="username" value="dskim">
 		<input type="password" id="password" name="password" value="1234">
+		
+		<!-- csrf token-->
+		<input type="hidden" id="_csrf" name="_csrf" value="">
+		
 		<button type="submit">Login</button>
 	</form>
+	
+	<script>
+		window.onload = function(){
+			getCsrfToken();
+		}
+	
+		async function getCsrfToken(){
+			let response = await fetch("/csrf-token", {credentials: "same-origin"})
+			let data = await response.json();
+			document.querySelector("#_csrf").value = data.token;
+		}
+	</script>	
 </body>
 </html>
+
